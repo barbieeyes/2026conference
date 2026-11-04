@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DREAM — 송례, 미래를 탐구하다</title>
+<style>
+  :root { --cyan:#45E3FF; --bg:#040a1a; }
+  * { box-sizing:border-box; }
+  html,body { margin:0; height:100%; background:var(--bg); color:#e8f6ff;
+    font-family: "Pretendard","Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",system-ui,sans-serif; }
+  body {
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 40%, rgba(40,120,200,.22), transparent 70%),
+      linear-gradient(rgba(80,180,255,.05) 1px, transparent 1px) 0 0/40px 40px,
+      linear-gradient(90deg, rgba(80,180,255,.05) 1px, transparent 1px) 0 0/40px 40px,
+      var(--bg);
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    padding:28px 16px 36px; min-height:100%;
+  }
+  .kicker { font: 600 13px/1 ui-monospace, "SFMono-Regular", Menlo, monospace; letter-spacing:.32em;
+    color:var(--cyan); text-transform:uppercase; margin:0 0 12px; text-align:center; }
+  h1 { margin:0 0 6px; font-size:clamp(26px,4.4vw,46px); font-weight:900; letter-spacing:.02em; text-align:center; }
+  h1 .d { background:linear-gradient(90deg,#19c8be,#2ea0f5 30%,#6ed2ff 50%,#3c82f0 70%,#5a6eff);
+    -webkit-background-clip:text; background-clip:text; color:transparent; letter-spacing:.18em; }
+  .sub { margin:0 0 22px; color:#9cc4e4; font-size:clamp(14px,1.8vw,17px); text-align:center; }
+  .frame { position:relative; width:min(1200px,100%); aspect-ratio:16/9; border-radius:14px;
+    box-shadow:0 0 0 1px rgba(69,227,255,.45), 0 0 40px rgba(69,227,255,.18), 0 24px 60px rgba(0,0,0,.6);
+    overflow:hidden; background:#000; }
+  .frame::before,.frame::after { content:""; position:absolute; width:46px; height:46px; pointer-events:none; z-index:2;
+    border:3px solid var(--cyan); filter:drop-shadow(0 0 6px var(--cyan)); }
+  .frame::before { top:8px; left:8px; border-right:0; border-bottom:0; border-radius:8px 0 0 0; }
+  .frame::after { bottom:8px; right:8px; border-left:0; border-top:0; border-radius:0 0 8px 0; }
+  video { width:100%; height:100%; display:block; background:#000; }
+  .letters { display:flex; gap:10px; margin-top:22px; flex-wrap:wrap; justify-content:center; }
+  .letters span { font: 700 12px/1 ui-monospace, Menlo, monospace; letter-spacing:.14em; padding:9px 12px;
+    border:1px solid currentColor; border-radius:8px; }
+  footer { margin-top:18px; color:#7fa6c6; font-size:13px; letter-spacing:.06em; text-align:center; }
+</style>
+</head>
+<body>
+  <p class="kicker">2026 서울형 과학탐구 선도학교</p>
+  <h1><span class="d">DREAM</span> 송례, 미래를 탐구하다</h1>
+  <p class="sub">송례중학교 과학탐구 1년, 1분 24초</p>
+  <div class="frame">
+    <video controls playsinline preload="metadata" poster="poster.jpg">
+      <source src="dream.mp4" type="video/mp4">
+      이 브라우저에서는 영상을 재생할 수 없어요.
+    </video>
+  </div>
+  <div class="letters" aria-label="DREAM 운영 방향">
+    <span style="color:#19c8be">D · DIGITAL INQUIRY</span>
+    <span style="color:#2ea0f5">R · RESEARCH LEARNING</span>
+    <span style="color:#6ed2ff">E · EDUCATOR EXPERTISE</span>
+    <span style="color:#3c82f0">A · ACTIVE PARTNERSHIP</span>
+    <span style="color:#7b8cff">M · MULTIPLYING IMPACT</span>
+  </div>
+  <footer>송례중학교 · Small Steps, Big Changes</footer>
+</body>
+</html>
